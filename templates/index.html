@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="DataLab AI — an interactive data science and machine learning laboratory.">
+  <title>DataLab AI — Data Science Laboratory</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+<div class="app-shell">
+  <aside class="sidebar">
+    <a class="brand" href="#"><span class="brand-mark">D<span>✳</span></span><span>DataLab<span class="brand-ai">AI</span><small>INTELLIGENCE LAB</small></span></a>
+    <div class="side-label">WORKSPACE</div>
+    <nav class="nav">
+      <a href="#overview" class="nav-link active"><span>◫</span> Overview</a>
+      <a href="#dataset" class="nav-link"><span>▦</span> Dataset Studio</a>
+      <a href="#ml-lab" class="nav-link"><span>⌘</span> ML Laboratory <i>NEW</i></a>
+      <a href="#insights" class="nav-link"><span>◌</span> Insights & Quality</a>
+      <a href="#reports" class="nav-link"><span>↗</span> Reports</a>
+    </nav>
+    <div class="sidebar-bottom">
+      <div class="status-card"><span class="status-dot"></span><div><b>Local analysis mode</b><small>Your file stays in this session</small></div></div>
+      <div class="profile"><div class="avatar">SW</div><div><b>Sarthaki Wanjari</b><small>Data Science Student</small></div><span class="profile-dots">•••</span></div>
+    </div>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <div class="breadcrumb">Workspace <span>/</span> <b>Overview</b></div>
+      <div class="top-actions"><span class="live-pill"><span></span> SYSTEM READY</span><button class="icon-btn" id="themeToggle" aria-label="Toggle theme">☼</button><div class="mini-avatar">SW</div></div>
+    </header>
+
+    <section class="hero" id="overview">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="sparkle">✳</span> YOUR PERSONAL DATA SCIENCE WORKSPACE</div>
+        <h1>Turn raw data into<br><span>remarkable discoveries.</span></h1>
+        <p>Explore datasets, run machine learning experiments, uncover anomalies, and turn complex data into clear decisions — all in one place.</p>
+        <div class="hero-buttons"><a class="btn btn-primary" href="#dataset">＋ Start an analysis <span>↗</span></a><a class="btn btn-ghost" href="#ml-lab">Explore ML Lab <span>→</span></a></div>
+        <div class="hero-meta"><span>✦</span> Built for curious minds & data-driven decisions</div>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="orb orb-one"></div><div class="orb orb-two"></div>
+        <div class="visual-grid"></div>
+        <div class="floating-card card-top"><span class="tiny-icon purple">⌁</span><div><small>DATA QUALITY</small><b>Clarity starts here</b></div><span class="card-check">✓</span></div>
+        <div class="chart-window"><div class="window-head"><div class="window-dots"><i></i><i></i><i></i></div><span>signal_overview.py</span><span class="window-menu">•••</span></div><div class="chart-title">Pattern discovery <span>↗</span></div><div class="chart-sub">A little data can reveal a lot.</div><div class="bars"><i style="height:30%"></i><i style="height:45%"></i><i style="height:38%"></i><i style="height:65%"></i><i style="height:52%"></i><i style="height:76%"></i><i style="height:61%"></i><i style="height:90%"></i><i style="height:70%"></i><i style="height:100%"></i><i style="height:82%"></i><i style="height:94%"></i></div><div class="chart-foot"><span>Pattern strength</span><b><span class="green-dot"></span> Ready to explore</b></div></div>
+        <div class="floating-card card-bottom"><span class="tiny-icon mint">⌘</span><div><small>ML WORKSPACE</small><b>Experiment. Evaluate. Learn.</b></div></div>
+        <div class="decor decor-a">✳</div><div class="decor decor-b">＋</div>
+      </div>
+    </section>
+
+    <section class="section-heading">
+      <div><div class="eyebrow muted">YOUR TOOLKIT</div><h2>Everything starts with a question.</h2><p>One workspace. A complete data science workflow.</p></div>
+      <span class="version-tag">VERSION 1.0 <span>●</span></span>
+    </section>
+    <section class="feature-grid">
+      <a class="feature-card" href="#dataset"><div class="feature-icon icon-blue">▦</div><div class="feature-top"><span>01 / EXPLORE</span><span>↗</span></div><h3>Dataset Studio</h3><p>Inspect structure, profile columns, and understand your data before modelling.</p><div class="feature-bottom">CSV · DATA PROFILING <span>→</span></div></a>
+      <a class="feature-card" href="#ml-lab"><div class="feature-icon icon-purple">⌘</div><div class="feature-top"><span>02 / EXPERIMENT</span><span>↗</span></div><h3>Machine Learning</h3><p>Train classification and regression models with held-out evaluation metrics.</p><div class="feature-bottom">CLASSIFY · PREDICT <span>→</span></div></a>
+      <a class="feature-card" href="#ml-lab"><div class="feature-icon icon-orange">◉</div><div class="feature-top"><span>03 / DISCOVER</span><span>↗</span></div><h3>Pattern Discovery</h3><p>Explore clusters and flag unusual records with unsupervised learning.</p><div class="feature-bottom">CLUSTER · DETECT <span>→</span></div></a>
+      <a class="feature-card" href="#reports"><div class="feature-icon icon-green">↗</div><div class="feature-top"><span>04 / COMMUNICATE</span><span>↗</span></div><h3>Insight Reports</h3><p>Export a concise dataset profile and column-level summary for your work.</p><div class="feature-bottom">SUMMARISE · EXPORT <span>→</span></div></a>
+    </section>
+
+    <section class="work-grid" id="dataset">
+      <div class="panel upload-panel">
+        <div class="panel-heading"><div><div class="eyebrow muted">STEP 01</div><h2>Bring your data to life</h2><p>Start with a CSV file. Your upload is processed for this request and isn't saved by this demo.</p></div><span class="panel-symbol">↥</span></div>
+        <form id="uploadForm">
+          <label class="dropzone" id="dropzone" for="fileInput">
+            <input type="file" id="fileInput" name="file" accept=".csv,text/csv">
+            <span class="upload-icon">↥</span><strong>Drop your CSV here, or <em>browse files</em></strong>
+            <small>CSV files only · Up to 25 MB · Maximum 100,000 rows</small>
+            <span class="file-selected" id="fileSelected">No file selected</span>
+          </label>
+          <div class="upload-footer"><span><span class="secure-icon">⌑</span> Temporary processing · No permanent storage</span><button class="btn btn-primary" type="submit" id="analyzeBtn">Analyze dataset <span>→</span></button></div>
+        </form>
+        <div class="demo-note"><span>✦</span><div><b>Just exploring?</b> Use a sample dataset to see the lab in action. <button id="loadSample" type="button">Load sample data →</button></div></div>
+      </div>
+      <div class="panel quick-panel">
+        <div class="eyebrow muted">ANALYSIS FLOW</div><h2>From upload to insight.</h2><p class="panel-intro">A simple, repeatable workflow for your next data project.</p>
+        <div class="flow-list"><div class="flow-item"><span class="flow-num">01</span><div><b>Inspect</b><small>Shape, types, missing values</small></div><span class="flow-status">START HERE</span></div><div class="flow-line"></div><div class="flow-item"><span class="flow-num">02</span><div><b>Understand</b><small>Statistics, distributions, relationships</small></div></div><div class="flow-line"></div><div class="flow-item"><span class="flow-num">03</span><div><b>Experiment</b><small>Train and evaluate ML models</small></div></div><div class="flow-line"></div><div class="flow-item"><span class="flow-num">04</span><div><b>Communicate</b><small>Export a clear analysis report</small></div></div></div>
+      </div>
+    </section>
+
+    <section class="results-section hidden" id="results">
+      <div class="section-heading result-heading"><div><div class="eyebrow muted">YOUR DATASET</div><h2 id="datasetTitle">Analysis overview</h2><p id="datasetSubtitle">Explore the structure of your uploaded data.</p></div><span class="result-badge"><span></span> ANALYSIS COMPLETE</span></div>
+      <div class="kpi-grid" id="kpiGrid"></div>
+      <div class="results-grid">
+        <div class="panel"><div class="panel-heading"><div><h3>Column profile</h3><p>Types, missing values, and unique values.</p></div></div><div class="table-wrap"><table><thead><tr><th>Column</th><th>Type</th><th>Missing</th><th>Unique</th><th>Summary</th></tr></thead><tbody id="columnTable"></tbody></table></div></div>
+        <div class="panel"><div class="panel-heading"><div><h3>Data preview</h3><p>First 8 rows from the dataset.</p></div></div><div class="table-wrap" id="previewTable"></div></div>
+      </div>
+      <div class="panel chart-panel"><div class="panel-heading"><div><h3>Explore a column</h3><p>Choose a field to inspect its distribution.</p></div><select id="chartColumn" class="select-control"></select></div><div id="distributionChart" class="chart-box"></div></div>
+    </section>
+
+    <section class="ml-section" id="ml-lab">
+      <div class="section-heading"><div><div class="eyebrow muted">STEP 02 · EXPERIMENT</div><h2>Enter the ML laboratory.</h2><p>Choose an experiment and evaluate patterns in your dataset.</p></div><span class="lab-chip"><span>✳</span> SCIKIT-LEARN POWERED</span></div>
+      <div class="ml-grid">
+        <div class="panel ml-controls"><div class="ml-title"><div class="feature-icon icon-purple">⌘</div><div><h3>Configure experiment</h3><p>Run an experiment on your selected CSV.</p></div></div>
+          <form id="mlForm">
+            <label class="field-label">Dataset source</label><div class="source-box"><span>▤</span><div><b id="mlFileName">Choose a CSV above</b><small>Uses the selected upload or sample data</small></div><span class="source-status" id="sourceStatus">WAITING</span></div>
+            <label class="field-label" for="taskSelect">Experiment type</label><select id="taskSelect" class="input-control"><option value="classification">Classification · predict a category</option><option value="regression">Regression · predict a number</option><option value="clustering">Clustering · discover groups</option><option value="anomaly">Anomaly detection · find unusual rows</option></select>
+            <div id="targetWrap"><label class="field-label" for="targetSelect">Target column</label><select id="targetSelect" class="input-control"><option value="">Analyze a dataset first</option></select><small class="field-help">The value you want the model to predict.</small></div>
+            <div id="clustersWrap" class="hidden"><label class="field-label" for="clustersSelect">Number of clusters</label><select id="clustersSelect" class="input-control"><option>2</option><option selected>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option></select></div>
+            <button class="btn btn-primary run-btn" type="submit" id="runMlBtn">Run experiment <span>→</span></button>
+          </form>
+          <div class="ml-disclaimer">Models run on your uploaded data. Results are exploratory and should be validated before real-world decisions.</div>
+        </div>
+        <div class="panel ml-output" id="mlOutput"><div class="empty-state"><div class="empty-art"><span>⌘</span><i></i><i></i><i></i></div><h3>Your next discovery starts here.</h3><p>Choose an experiment on the left. Your model metrics and results will appear here.</p><div class="empty-tags"><span>Classification</span><span>Regression</span><span>Clustering</span><span>Anomaly detection</span></div></div></div>
+      </div>
+    </section>
+
+    <section class="insights-grid" id="insights">
+      <div class="panel"><div class="eyebrow muted">DATA QUALITY</div><h2>Trust starts with understanding.</h2><p class="panel-intro">Before modelling, make sure you know what your data contains. DataLab highlights common quality checks so you can make informed choices.</p><div class="quality-items"><div><span class="quality-icon">✓</span><span><b>Missing values</b><small>Spot incomplete columns before analysis.</small></span></div><div><span class="quality-icon">↻</span><span><b>Duplicate records</b><small>Check for repeated rows in your dataset.</small></span></div><div><span class="quality-icon">⌁</span><span><b>Column types</b><small>Understand numeric and categorical fields.</small></span></div></div></div>
+      <div class="panel report-panel" id="reports"><div class="report-art"><div class="report-sheet"><span></span><span></span><span></span><span></span><div class="report-mini-chart">▂ ▄ ▃ ▆ ▅ ▇</div></div><div class="report-spark">✳</div></div><div class="eyebrow muted">STEP 03 · SHARE</div><h2>Make your findings useful.</h2><p>Download a text report with dataset statistics and a column-by-column summary.</p><button class="btn btn-dark" id="downloadReport">Export analysis report <span>↓</span></button><small class="report-hint" id="reportHint">Analyze a dataset first to enable export.</small></div>
+    </section>
+    <footer><a class="footer-brand" href="#">DataLab<span>AI</span></a><span>Designed & built by <b>Sarthaki Wanjari</b> · Final-Year Data Science Student</span><span class="footer-right">LEARN · EXPERIMENT · DISCOVER</span></footer>
+  </main>
+</div>
+<div class="toast" id="toast" role="status"></div>
+<script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
